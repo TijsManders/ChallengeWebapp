@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tafel Status</title>
+</head>
+
+<body>
+    <form method="post">
+    <fieldset>
+        <legend>Tafel1 Status</legend>
+        <div>
+          <input type="radio" name="Tafel1I" value="true"  {{if .Tafel1}} checked {{end}}>
+          <label for="Ober nodig">Ober nodig</label>
+        </div>
+    
+        <div>
+          <input type="radio" name="Tafel1I" value="false" {{if not .Tafel1}} checked {{end}}>
+          <label for="Geen ober nodig">Geen ober nodig</label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Tafel2 Status</legend>
+        <div>
+          <input type="radio" name="Tafel2I" value="true" {{if .Tafel2}} checked {{end}}>
+          <label for="Ober nodig">Ober nodig</label>
+        </div>
+    
+        <div>
+          <input type="radio" name="Tafel2I" value="false" {{if not .Tafel2}} checked {{end}}>
+          <label for="Geen ober nodig">Geen ober nodig</label>
+        </div>
+    </fieldset>
+    <button type="submit">Bevestigen</button>
+  </form>
+    </body>
+</html>
